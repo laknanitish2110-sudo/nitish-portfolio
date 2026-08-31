@@ -203,7 +203,7 @@ export const PORTFOLIO_DATA = {
       description: "Researching an LLM fine-tuned to catch gaps in existing models where wrong answers have high consequences (relevant to SnapMark and SolarSwap).",
       tech: "LLM Fine-Tuning + Evaluation",
       status: "RESEARCH",
-      codeSnippet: `const validator = new GapAnalysisLLM({ accuracyThreshold: 0.992 });`
+      codeSnippet: `const validator = new GapAnalysisLLM({ evaluationMode: 'high-confidence' });`
     },
     {
       id: "exp-4",

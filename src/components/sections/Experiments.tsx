@@ -116,7 +116,7 @@ export const Experiments: React.FC = () => {
             </div>
             <div className="flex items-center space-x-2 text-xs text-[#00F0FF]">
               <Terminal size={14} />
-              <span>LIVE INSPECTOR</span>
+              <span>EXPERIMENT INSPECTOR</span>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ export const Experiments: React.FC = () => {
 
             {/* Simulated Live Output Console */}
             <div className="p-4 rounded-lg bg-white/[0.02] border border-white/10 text-xs space-y-2">
-              <div className="text-[#8E8EA8]">// EXPERIMENT TELEMETRY</div>
+              <div className="text-[#8E8EA8]">// PROTOTYPE TELEMETRY</div>
               <div className="flex items-center space-x-2">
                 <span className="text-[#8E8EA8]">Status:</span>
                 {getExperimentStatusBadge(activeExp.status)}

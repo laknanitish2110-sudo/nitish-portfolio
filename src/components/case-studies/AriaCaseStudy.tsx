@@ -75,7 +75,7 @@ export const AriaCaseStudy: React.FC<AriaCaseStudyProps> = ({ project, onClose }
     },
     {
       title: "API Integration",
-      detail: "Bi-directional webhook connectivity with Meta WhatsApp Cloud API for sub-second automated messaging responses."
+      detail: "Bi-directional webhook connectivity with Meta WhatsApp Cloud API for automated messaging responses."
     },
     {
       title: "Database-Backed State",
@@ -92,7 +92,7 @@ export const AriaCaseStudy: React.FC<AriaCaseStudyProps> = ({ project, onClose }
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-300" role="dialog" aria-modal="true" aria-labelledby="aria-case-study-title">
       <div 
         className="relative w-full max-w-5xl my-auto bg-[#0a0a0f] border border-white/20 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-10 max-h-[92vh] overflow-y-auto font-space text-left"
         onClick={(e) => e.stopPropagation()}
@@ -110,7 +110,7 @@ export const AriaCaseStudy: React.FC<AriaCaseStudyProps> = ({ project, onClose }
                 <span>LIVE & DEPLOYED</span>
               </span>
             </div>
-            <h2 className="font-syne text-3xl sm:text-5xl font-black text-white tracking-tight mt-1">
+            <h2 id="aria-case-study-title" className="font-syne text-3xl sm:text-5xl font-black text-white tracking-tight mt-1">
               {project.title}
             </h2>
             <p className="font-space text-sm sm:text-base text-[#00F0FF]">
@@ -121,7 +121,7 @@ export const AriaCaseStudy: React.FC<AriaCaseStudyProps> = ({ project, onClose }
           <button
             onClick={onClose}
             className="p-2.5 rounded-full border border-white/10 text-white/80 hover:text-[#00F0FF] hover:border-[#00F0FF] transition-colors"
-            aria-label="Close dossier"
+            aria-label="Close case study"
           >
             <X size={20} />
           </button>
