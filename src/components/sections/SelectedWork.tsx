@@ -96,7 +96,7 @@ export const SelectedWork: React.FC = () => {
                 </div>
 
                 <div className="absolute bottom-4 right-4 flex items-center space-x-2 font-mono text-xs px-4 py-2 rounded-full bg-[#00F0FF] text-black font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <span>READ PROJECT DETAILS</span>
+                  <span>VIEW PROJECT DETAILS</span>
                   <ArrowUpRight size={14} />
                 </div>
               </div>
