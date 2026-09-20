@@ -21,4 +21,4 @@ export const MEDIA_ITEMS: MediaItem[] = [
   // { type: "video", src: "clip1.mp4", caption: "The vibes" },
 ];
 
-export const FRIEND_NAME = "Friend"; // ← Change this to your friend's name
+export const FRIEND_NAME = "Mani";
