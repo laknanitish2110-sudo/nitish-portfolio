@@ -73,7 +73,6 @@ export const MediaScene: React.FC<{
         overflow: "hidden",
         transform: enterTransform,
         opacity: enterOpacity,
-        filter: enterFilter,
       }}
     >
       {/* Flash overlay for flashCut transition */}
@@ -94,8 +93,7 @@ export const MediaScene: React.FC<{
         style={{
           position: "absolute",
           inset: -60,
-          opacity: 0.35,
-          filter: "blur(35px) saturate(1.5)",
+          opacity: 0.25,
           transform: `scale(${kenBurnsScale}) translate(${kenBurnsX}px, ${kenBurnsY}px)`,
         }}
       >
@@ -187,7 +185,7 @@ function getEntranceStyle(
   frame: number,
   fps: number,
   width: number,
-  height: number,
+  _height: number,
   transition: TransitionType,
 ) {
   const progress = spring({
@@ -202,7 +200,6 @@ function getEntranceStyle(
       return {
         enterTransform: `scale(${scale})`,
         enterOpacity: interpolate(progress, [0, 0.4, 1], [0, 1, 1], { extrapolateRight: "clamp" }),
-        enterFilter: `blur(${interpolate(progress, [0, 1], [8, 0])}px)`,
       };
     }
     case "slideLeft": {
@@ -210,7 +207,6 @@ function getEntranceStyle(
       return {
         enterTransform: `translateX(${tx}px) scale(${interpolate(progress, [0, 1], [0.92, 1])})`,
         enterOpacity: interpolate(progress, [0, 0.3, 1], [0, 1, 1], { extrapolateRight: "clamp" }),
-        enterFilter: "none",
       };
     }
     case "slideRight": {
@@ -218,14 +214,12 @@ function getEntranceStyle(
       return {
         enterTransform: `translateX(${tx}px) scale(${interpolate(progress, [0, 1], [0.92, 1])})`,
         enterOpacity: interpolate(progress, [0, 0.3, 1], [0, 1, 1], { extrapolateRight: "clamp" }),
-        enterFilter: "none",
       };
     }
     case "flashCut":
       return {
         enterTransform: `scale(${interpolate(progress, [0, 1], [1.05, 1])})`,
         enterOpacity: 1,
-        enterFilter: "none",
       };
     case "rotateIn": {
       const rot = interpolate(progress, [0, 1], [6, 0]);
@@ -233,7 +227,6 @@ function getEntranceStyle(
       return {
         enterTransform: `rotate(${rot}deg) scale(${sc})`,
         enterOpacity: interpolate(progress, [0, 0.3, 1], [0, 1, 1], { extrapolateRight: "clamp" }),
-        enterFilter: "none",
       };
     }
     case "fade":
@@ -241,7 +234,6 @@ function getEntranceStyle(
       return {
         enterTransform: `scale(${interpolate(progress, [0, 1], [1.06, 1])})`,
         enterOpacity: progress,
-        enterFilter: "none",
       };
   }
 }

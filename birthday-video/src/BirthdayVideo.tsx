@@ -4,8 +4,6 @@ import {
   useVideoConfig,
   Sequence,
   interpolate,
-  Audio,
-  staticFile,
 } from "remotion";
 import { MEDIA_ITEMS, FRIEND_NAME } from "./mediaConfig";
 import { IntroScene } from "./components/IntroScene";
@@ -78,19 +76,6 @@ export const BirthdayVideo: React.FC<{
         overflow: "hidden",
       }}
     >
-      {/* Background music */}
-      <Audio
-        src={staticFile("media/bgm.wav")}
-        volume={(f) => {
-          const totalFrames = outroStart + OUTRO_FRAMES;
-          const fadeInEnd = fps * 2;
-          const fadeOutStart = totalFrames - fps * 3;
-          if (f < fadeInEnd) return (f / fadeInEnd) * 0.5;
-          if (f > fadeOutStart) return Math.max(0, ((totalFrames - f) / (fps * 3)) * 0.5);
-          return 0.5;
-        }}
-      />
-
       <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <FloatingParticles count={18} colors={["rgba(232,196,108,0.3)", "rgba(232,124,138,0.2)"]} />
       </div>

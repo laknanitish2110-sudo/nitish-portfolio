@@ -117,7 +117,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
                 fontSize: isPortrait ? 48 : 36,
                 transform: `scale(${s}) rotate(${interpolate(s, [0, 0.5, 1], [0, -15, 0])}deg)`,
                 display: "inline-block",
-                filter: `drop-shadow(0 0 12px rgba(232,196,108,0.4))`,
+                textShadow: "0 0 12px rgba(232,196,108,0.4)",
               }}
             >
               {e}

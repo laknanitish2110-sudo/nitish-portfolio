@@ -94,7 +94,7 @@ export const IntroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
             background: `radial-gradient(circle, ${orb.color} 0%, transparent 70%)`,
             left: orb.x,
             top: orb.y,
-            filter: "blur(50px)",
+            opacity: 0.5,
             transform: `scale(${1 + 0.1 * Math.sin(frame * 0.03 + i)})`,
           }}
         />
@@ -112,7 +112,7 @@ export const IntroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
           height: 3,
           background: "linear-gradient(90deg, transparent, rgba(232,196,108,0.8), rgba(255,255,255,0.9), rgba(232,196,108,0.8), transparent)",
           opacity: lensFlareOpacity,
-          filter: "blur(2px)",
+          opacity: 0.7,
           zIndex: 10,
         }}
       />
@@ -177,7 +177,7 @@ export const IntroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
           fontSize: isPortrait ? 80 : 60,
           opacity: cakeSpring,
           transform: `scale(${interpolate(cakeSpring, [0, 1], [0, 1.1])}) rotate(${interpolate(cakeSpring, [0, 0.5, 1], [0, -10, 0])}deg)`,
-          filter: "drop-shadow(0 0 40px rgba(232,196,108,0.5))",
+          textShadow: "0 0 40px rgba(232,196,108,0.5)",
         }}
       >
         🎂
