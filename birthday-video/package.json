@@ -1,0 +1,27 @@
+{
+  "name": "birthday-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts BirthdayVideo out/birthday.mp4 --props='{\"friendName\":\"Friend\"}'",
+    "render:landscape": "remotion render src/index.ts BirthdayVideoLandscape out/birthday-landscape.mp4 --props='{\"friendName\":\"Friend\"}'",
+    "preview": "remotion preview src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.526",
+    "@remotion/media-utils": "^4.0.526",
+    "@remotion/player": "^4.0.526",
+    "@remotion/transitions": "^4.0.526",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.526",
+    "typescript": "^7.0.2"
+  }
+}
