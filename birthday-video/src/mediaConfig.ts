@@ -35,4 +35,4 @@ export const MEDIA_ITEMS: MediaItem[] = [
   { type: "image", src: "photo14.jpg", caption: "Here's to many more adventures" },
 ];
 
-export const FRIEND_NAME = "Mani";
+export const FRIEND_NAME = "Ash";
