@@ -25,7 +25,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       style={{
         position: "absolute",
         inset: 0,
-        backgroundColor: "#0a0a12",
+        backgroundColor: "#0d0815",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -34,28 +34,28 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
         opacity: fadeOut,
       }}
     >
-      {/* Warm gradient */}
+      {/* Warm rose gradient */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          background: `radial-gradient(ellipse at 50% 40%, rgba(232,196,108,${warmOverlay}) 0%, transparent 60%),
-                       radial-gradient(ellipse at 30% 70%, rgba(232,124,138,0.08) 0%, transparent 50%),
-                       radial-gradient(ellipse at 70% 30%, rgba(184,169,212,0.06) 0%, transparent 50%)`,
+          background: `radial-gradient(ellipse at 50% 40%, rgba(219,112,147,${warmOverlay}) 0%, transparent 60%),
+                       radial-gradient(ellipse at 30% 70%, rgba(186,85,211,0.08) 0%, transparent 50%),
+                       radial-gradient(ellipse at 70% 30%, rgba(255,182,193,0.06) 0%, transparent 50%)`,
         }}
       />
 
-      {/* Golden warm overlay that builds */}
+      {/* Rose warm overlay that builds */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(232,196,108,0.03)",
+          backgroundColor: "rgba(219,112,147,0.03)",
           opacity: warmOverlay * 8,
         }}
       />
 
-      <FloatingParticles count={45} colors={["rgba(232,196,108,0.5)", "rgba(232,124,138,0.4)", "rgba(255,215,0,0.4)", "rgba(184,169,212,0.3)"]} />
+      <FloatingParticles count={45} colors={["rgba(219,112,147,0.5)", "rgba(186,85,211,0.4)", "rgba(255,182,193,0.4)", "rgba(255,105,180,0.3)"]} />
       <FloatingHearts count={25} startFrame={5} />
       <Fireworks startFrame={10} burstCount={4} />
       <Fireworks startFrame={50} burstCount={4} />
@@ -69,7 +69,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
         fontSize={isPortrait ? 14 : 12}
         fontFamily="'Helvetica Neue', sans-serif"
         fontWeight={500}
-        color="#e8c46c"
+        color="#db7093"
         letterSpacing="0.35em"
         textTransform="uppercase"
       />
@@ -81,7 +81,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
         text={`Happy Birthday,\n${friendName}`}
         startFrame={12}
         fontSize={isPortrait ? 74 : 58}
-        glowColor="rgba(232,196,108,0.4)"
+        glowColor="rgba(219,112,147,0.4)"
         lineHeight={1.1}
       />
 
@@ -89,22 +89,22 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
 
       {/* Typewriter subtitle */}
       <TextReveal
-        text="You deserve the whole world"
+        text="You deserve all the happiness"
         startFrame={30}
         fontSize={isPortrait ? 30 : 26}
         fontFamily="'Georgia', serif"
         fontWeight={400}
-        color="#e87c8a"
+        color="#ba55d3"
         typewriter
         glow
-        glowColor="rgba(232,124,138,0.3)"
+        glowColor="rgba(186,85,211,0.3)"
       />
 
       <div style={{ height: isPortrait ? 36 : 24 }} />
 
       {/* Emoji row with staggered bounce */}
       <div style={{ display: "flex", gap: 16 }}>
-        {["❤️", "🎉", "🥳", "🎂", "❤️"].map((e, i) => {
+        {["💖", "🎉", "🥳", "🎂", "💖"].map((e, i) => {
           const s = spring({
             frame: Math.max(0, frame - 50 - i * 4),
             fps,
@@ -117,7 +117,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
                 fontSize: isPortrait ? 48 : 36,
                 transform: `scale(${s}) rotate(${interpolate(s, [0, 0.5, 1], [0, -15, 0])}deg)`,
                 display: "inline-block",
-                textShadow: "0 0 12px rgba(232,196,108,0.4)",
+                textShadow: "0 0 12px rgba(219,112,147,0.4)",
               }}
             >
               {e}
@@ -144,7 +144,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
         style={{
           position: "absolute",
           inset: 0,
-          background: "radial-gradient(ellipse at center, transparent 35%, rgba(10,10,18,0.6) 100%)",
+          background: "radial-gradient(ellipse at center, transparent 35%, rgba(13,8,21,0.6) 100%)",
           pointerEvents: "none",
         }}
       />

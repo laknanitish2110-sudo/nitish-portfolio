@@ -40,7 +40,7 @@ export const MediaScene: React.FC<{
 
   const mediaSrc = staticFile(`media/${item.src}`);
 
-  const { enterTransform, enterOpacity, enterFilter } = getEntranceStyle(
+  const { enterTransform, enterOpacity } = getEntranceStyle(
     frame, fps, width, height, transition
   );
 
@@ -65,7 +65,7 @@ export const MediaScene: React.FC<{
       style={{
         position: "absolute",
         inset: 0,
-        backgroundColor: "#0a0a12",
+        backgroundColor: "#0d0815",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -109,11 +109,11 @@ export const MediaScene: React.FC<{
         style={{
           position: "absolute",
           inset: 0,
-          background: "radial-gradient(ellipse at center, rgba(10,10,18,0.25) 0%, rgba(10,10,18,0.7) 100%)",
+          background: "radial-gradient(ellipse at center, rgba(13,8,21,0.25) 0%, rgba(13,8,21,0.7) 100%)",
         }}
       />
 
-      {/* Main media with animated border */}
+      {/* Main media with animated border — rose glow */}
       <div
         style={{
           position: "relative",
@@ -124,9 +124,9 @@ export const MediaScene: React.FC<{
           overflow: "hidden",
           boxShadow: `
             0 25px 60px rgba(0,0,0,0.6),
-            0 0 0 1.5px rgba(232,196,108,${borderGlow}),
-            0 0 ${40 * borderGlow}px rgba(232,196,108,${borderGlow * 0.4}),
-            0 0 ${80 * borderGlow}px rgba(232,196,108,${borderGlow * 0.15})
+            0 0 0 1.5px rgba(219,112,147,${borderGlow}),
+            0 0 ${40 * borderGlow}px rgba(219,112,147,${borderGlow * 0.4}),
+            0 0 ${80 * borderGlow}px rgba(186,85,211,${borderGlow * 0.15})
           `,
         }}
       >
@@ -149,14 +149,14 @@ export const MediaScene: React.FC<{
           )}
         </div>
 
-        {/* Gold border inner glow */}
+        {/* Rose border inner glow */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             borderRadius: 18,
-            border: `1.5px solid rgba(232,196,108,${borderGlow})`,
-            boxShadow: `inset 0 0 40px rgba(232,196,108,${borderGlow * 0.1})`,
+            border: `1.5px solid rgba(219,112,147,${borderGlow})`,
+            boxShadow: `inset 0 0 40px rgba(219,112,147,${borderGlow * 0.1})`,
           }}
         />
       </div>
@@ -172,7 +172,7 @@ export const MediaScene: React.FC<{
             fontWeight={400}
             color="#f5efe6"
             glow
-            glowColor="rgba(232,196,108,0.35)"
+            glowColor="rgba(219,112,147,0.35)"
             typewriter
           />
         </div>

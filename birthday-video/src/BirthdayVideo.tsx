@@ -24,15 +24,7 @@ const TRANSITIONS: TransitionType[] = [
   "fade",
   "flashCut",
   "zoomBurst",
-  "slideRight",
-  "rotateIn",
   "slideLeft",
-  "flashCut",
-  "zoomBurst",
-  "fade",
-  "slideLeft",
-  "flashCut",
-  "rotateIn",
 ];
 
 function getSceneDuration(type: "image" | "video", fps: number) {
@@ -71,13 +63,13 @@ export const BirthdayVideo: React.FC<{
       style={{
         width,
         height,
-        backgroundColor: "#0a0a12",
+        backgroundColor: "#0d0815",
         position: "relative",
         overflow: "hidden",
       }}
     >
       <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-        <FloatingParticles count={18} colors={["rgba(232,196,108,0.3)", "rgba(232,124,138,0.2)"]} />
+        <FloatingParticles count={18} colors={["rgba(219,112,147,0.3)", "rgba(186,85,211,0.2)"]} />
       </div>
 
       {/* Intro */}
@@ -147,12 +139,12 @@ export const BirthdayVideo: React.FC<{
         </SceneWrapper>
       </Sequence>
 
-      {/* Beat pulse overlay */}
+      {/* Beat pulse overlay — rose tint */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(232,196,108,0.1)",
+          backgroundColor: "rgba(219,112,147,0.1)",
           opacity: beatPulse,
           pointerEvents: "none",
           zIndex: 95,
@@ -165,7 +157,7 @@ export const BirthdayVideo: React.FC<{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse at center, transparent 50%, rgba(10,10,18,0.4) 100%)",
+            "radial-gradient(ellipse at center, transparent 50%, rgba(13,8,21,0.4) 100%)",
           pointerEvents: "none",
           zIndex: 100,
         }}

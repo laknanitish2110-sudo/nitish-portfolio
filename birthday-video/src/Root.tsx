@@ -15,7 +15,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{
-          friendName: "Mani",
+          friendName: "Ash",
         }}
       />
       <Composition
@@ -26,7 +26,7 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={{
-          friendName: "Mani",
+          friendName: "Ash",
         }}
       />
     </>
