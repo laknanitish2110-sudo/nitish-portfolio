@@ -66,7 +66,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       <TextReveal
         text="WITH ALL THE LOVE"
         startFrame={5}
-        fontSize={isPortrait ? 14 : 12}
+        fontSize={isPortrait ? 18 : 14}
         fontFamily="'Helvetica Neue', sans-serif"
         fontWeight={500}
         color="#db7093"
@@ -80,7 +80,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       <SlamText
         text={`Happy Birthday,\n${friendName}`}
         startFrame={12}
-        fontSize={isPortrait ? 74 : 58}
+        fontSize={isPortrait ? 86 : 68}
         glowColor="rgba(219,112,147,0.4)"
         lineHeight={1.1}
       />
@@ -91,7 +91,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       <TextReveal
         text="You deserve all the happiness"
         startFrame={30}
-        fontSize={isPortrait ? 30 : 26}
+        fontSize={isPortrait ? 36 : 30}
         fontFamily="'Georgia', serif"
         fontWeight={400}
         color="#ba55d3"
@@ -114,7 +114,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
             <span
               key={i}
               style={{
-                fontSize: isPortrait ? 48 : 36,
+                fontSize: isPortrait ? 56 : 42,
                 transform: `scale(${s}) rotate(${interpolate(s, [0, 0.5, 1], [0, -15, 0])}deg)`,
                 display: "inline-block",
                 textShadow: "0 0 12px rgba(219,112,147,0.4)",
@@ -131,7 +131,7 @@ export const OutroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       <TextReveal
         text="From someone who's grateful\nto have you in their life"
         startFrame={70}
-        fontSize={isPortrait ? 20 : 17}
+        fontSize={isPortrait ? 24 : 20}
         fontFamily="'Helvetica Neue', sans-serif"
         fontWeight={300}
         color="rgba(245,239,230,0.55)"

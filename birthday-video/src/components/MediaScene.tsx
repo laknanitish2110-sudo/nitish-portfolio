@@ -167,7 +167,7 @@ export const MediaScene: React.FC<{
           <TextReveal
             text={item.caption}
             startFrame={10}
-            fontSize={isPortrait ? 38 : 32}
+            fontSize={isPortrait ? 44 : 36}
             fontFamily="'Georgia', serif"
             fontWeight={400}
             color="#f5efe6"

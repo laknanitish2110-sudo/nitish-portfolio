@@ -147,7 +147,7 @@ export const IntroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
         style={{
           opacity: eyebrowOpacity,
           transform: `translateY(${(1 - eyebrowOpacity) * 15}px)`,
-          fontSize: isPortrait ? 15 : 13,
+          fontSize: isPortrait ? 20 : 16,
           fontFamily: "'Helvetica Neue', sans-serif",
           fontWeight: 500,
           color: "#db7093",
@@ -164,7 +164,7 @@ export const IntroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       <SlamText
         text={`Happy\nBirthday,\n${friendName}!`}
         startFrame={18}
-        fontSize={isPortrait ? 84 : 66}
+        fontSize={isPortrait ? 96 : 76}
         glowColor="rgba(219,112,147,0.35)"
       />
 
@@ -173,7 +173,7 @@ export const IntroScene: React.FC<{ friendName: string }> = ({ friendName }) => 
       {/* Cake with bounce */}
       <div
         style={{
-          fontSize: isPortrait ? 80 : 60,
+          fontSize: isPortrait ? 90 : 70,
           opacity: cakeSpring,
           transform: `scale(${interpolate(cakeSpring, [0, 1], [0, 1.1])}) rotate(${interpolate(cakeSpring, [0, 0.5, 1], [0, -10, 0])}deg)`,
           textShadow: "0 0 40px rgba(219,112,147,0.5)",
